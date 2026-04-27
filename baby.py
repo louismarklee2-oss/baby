@@ -6,7 +6,7 @@ import random
 TOKEN = 'token here'
 
 BABY_WORDS = [
-    "apple", "banana", "cherry", "dragon", "elephant", "flower", "guitar", "house", 
+    "NIGGER", "NIGGER", "GET NIGGERED", "RAPE ", "KILL", "NIGGER", "FAGGOT", "NSDAP", 
     "island", "jungle", "kite", "lemon", "mountain", "night", "ocean", "piano",
     "queen", "rainbow", "sunset", "tiger", "umbrella", "violin", "waterfall", "xylophone",
     "yellow", "zebra", "angel", "baby", "cloud", "diamond", "eagle", "fire",
@@ -43,17 +43,17 @@ BABY_WORDS = [
 ]
 
 IMAGE_LINKS = [
-    "https://files.catbox.moe/f2xnwf.png",
-    "https://files.catbox.moe/hp3v69.png",
-    "https://files.catbox.moe/yl5or3.jpg",
-    "https://files.catbox.moe/x8alvd.gif"
+    "https://media.discordapp.net/attachments/1458707462592008274/1498437684996210779/download_3_-_Copy.png?ex=69f12857&is=69efd6d7&hm=2c7a2f14ce65547c5109b96cf7b0f1a7a6c88b522e044f11fe0e201351e2b5a8&=&format=webp&quality=lossless&width=253&height=253",
+    "https://media.discordapp.net/attachments/1458707462592008274/1498437684996210779/download_3_-_Copy.png?ex=69f12857&is=69efd6d7&hm=2c7a2f14ce65547c5109b96cf7b0f1a7a6c88b522e044f11fe0e201351e2b5a8&=&format=webp&quality=lossless&width=253&height=253",
+    "https://media.discordapp.net/attachments/1458707462592008274/1498437684996210779/download_3_-_Copy.png?ex=69f12857&is=69efd6d7&hm=2c7a2f14ce65547c5109b96cf7b0f1a7a6c88b522e044f11fe0e201351e2b5a8&=&format=webp&quality=lossless&width=253&height=253",
+    "https://media.discordapp.net/attachments/1458707462592008274/1498437684996210779/download_3_-_Copy.png?ex=69f12857&is=69efd6d7&hm=2c7a2f14ce65547c5109b96cf7b0f1a7a6c88b522e044f11fe0e201351e2b5a8&=&format=webp&quality=lossless&width=253&height=253"
 ]
 
 CUSTOM_LINKS = [
-    "https://files.catbox.moe/3e028g.mp4",
-    "https://files.catbox.moe/xab64u.mp4",
-    "https://files.catbox.moe/nggvpv.mp4",
-    "https://files.catbox.moe/o4jre2.mp4"
+    "https://media.discordapp.net/attachments/1458707462592008274/1498437684996210779/download_3_-_Copy.png?ex=69f12857&is=69efd6d7&hm=2c7a2f14ce65547c5109b96cf7b0f1a7a6c88b522e044f11fe0e201351e2b5a8&=&format=webp&quality=lossless&width=253&height=253",
+    "https://media.discordapp.net/attachments/1458707462592008274/1498437684996210779/download_3_-_Copy.png?ex=69f12857&is=69efd6d7&hm=2c7a2f14ce65547c5109b96cf7b0f1a7a6c88b522e044f11fe0e201351e2b5a8&=&format=webp&quality=lossless&width=253&height=253",
+    "https://media.discordapp.net/attachments/1458707462592008274/1498437684996210779/download_3_-_Copy.png?ex=69f12857&is=69efd6d7&hm=2c7a2f14ce65547c5109b96cf7b0f1a7a6c88b522e044f11fe0e201351e2b5a8&=&format=webp&quality=lossless&width=253&height=253",
+    "https://media.discordapp.net/attachments/1458707462592008274/1498437684996210779/download_3_-_Copy.png?ex=69f12857&is=69efd6d7&hm=2c7a2f14ce65547c5109b96cf7b0f1a7a6c88b522e044f11fe0e201351e2b5a8&=&format=webp&quality=lossless&width=253&height=253"
 ]
 
 LINKS_PER_MESSAGE = 2
@@ -79,7 +79,7 @@ bot = BabyBot()
 class SayModal(ui.Modal, title="Enter your message"):
     user_input = ui.TextInput(
         label="Your message",
-        placeholder="Type what you want to spam here...",
+        placeholder="RAPE THIS SERVER NOW!!!...",
         required=True,
         max_length=1000
     )
@@ -96,7 +96,7 @@ class SayModal(ui.Modal, title="Enter your message"):
 class BabyCustomModal(ui.Modal, title="Enter your message"):
     user_input = ui.TextInput(
         label="Your message",
-        placeholder="Text to send with the images...",
+        placeholder="rape these niggers...",
         required=True,
         max_length=1000
     )
@@ -104,7 +104,7 @@ class BabyCustomModal(ui.Modal, title="Enter your message"):
     async def on_submit(self, interaction: discord.Interaction):
         view = BabyCustomButtonView(self.user_input.value)
         await interaction.response.send_message(
-            "Click the button to send the images!",
+            "Click the button to rape the niggers!",
             ephemeral=True,
             view=view
         )
@@ -115,7 +115,7 @@ class BabyButtonView(ui.View):
         super().__init__(timeout=None)
         self.click_count = 0
     
-    @ui.button(label="Start Spam", style=discord.ButtonStyle.green, custom_id="baby_spam_button")
+    @ui.button(label="Start rape!", style=discord.ButtonStyle.green, custom_id="hitler_spam_button")
     async def start_spam_button(self, interaction: discord.Interaction, button: ui.Button):
         await interaction.response.defer(ephemeral=False)
         
@@ -123,7 +123,7 @@ class BabyButtonView(ui.View):
         
         for i in range(message_count):
             try:
-                random_words = " ".join(random.sample(BABY_WORDS, 10))
+                random_words = " ".join(random.sample(NIGGER_WORDS, 10))
                 msg = f"{random_words}\n\n" + "\n".join(IMAGE_LINKS)
                 await interaction.followup.send(msg)
                 if i < message_count - 1:
@@ -174,7 +174,7 @@ class SayButtonView(ui.View):
         self.user_text = user_text
         self.click_count = 0
     
-    @ui.button(label="Start Spam", style=discord.ButtonStyle.green, custom_id="say_spam_button")
+    @ui.button(label="Start RAPE", style=discord.ButtonStyle.green, custom_id="say_RAPE_button")
     async def start_spam_button(self, interaction: discord.Interaction, button: ui.Button):
         await interaction.response.defer(ephemeral=False)
         
@@ -202,19 +202,19 @@ async def on_ready():
     print(f'{len(bot.guilds)} guilds')
 
 
-@app_commands.command(name="baby", description="sdjibabyasdhwaskdaskdwaskhaddsasdasdsad skibidi toilet mama")
+@app_commands.command(name="natsocbot", description="HEIL HITLER!")
 @app_commands.allowed_installs(guilds=True, users=True)
 @app_commands.allowed_contexts(guilds=True, dms=True, private_channels=True)
 async def baby_command(interaction: discord.Interaction):
     view = BabyButtonView()
     await interaction.response.send_message(
-        "begin the spam",
+        "begin the RAPE",
         ephemeral=True,
         view=view
     )
 
 
-@app_commands.command(name="babycustom", description="this randomizes and sends images o algo")
+@app_commands.command(name="hitlercustom", description="sike i lied nigger")
 @app_commands.allowed_installs(guilds=True, users=True)
 @app_commands.allowed_contexts(guilds=True, dms=True, private_channels=True)
 async def babycustom_command(interaction: discord.Interaction):
@@ -222,18 +222,18 @@ async def babycustom_command(interaction: discord.Interaction):
     await interaction.response.send_modal(modal)
 
 
-@app_commands.command(name="stop", description="it doesnt work geg")
+@app_commands.command(name="stop", description="it doesnt work nigger")
 @app_commands.allowed_installs(guilds=True, users=True)
 @app_commands.allowed_contexts(guilds=True, dms=True, private_channels=True)
 async def stop_baby(interaction: discord.Interaction):
     if not bot.is_spamming:
-        await interaction.response.send_message('Baby spam is not currently running.', ephemeral=True)
+        await interaction.response.send_message('nigger rape is not currently running.', ephemeral=True)
         return
     bot.is_spamming = False
     await interaction.response.send_message('stoppedcado')
 
 
-@app_commands.command(name="ping", description="up status")
+@app_commands.command(name="ping these niggers", description="hitler status")
 @app_commands.allowed_installs(guilds=True, users=True)
 @app_commands.allowed_contexts(guilds=True, dms=True, private_channels=True)
 async def ping(interaction: discord.Interaction):
